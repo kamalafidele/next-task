@@ -155,6 +155,12 @@
   height: 100%;
 }
 
+@media screen and (max-width: 503px) {
+  .card{
+    flex-basis: 90%;
+  }
+}
+
 @media screen and (max-width: 801px) {
   .main{
     padding: 1em;
