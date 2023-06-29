@@ -26,6 +26,18 @@ const BitCoinPrice = () => {
         }
     }
 
+    function formatUSD(rate) {
+        const options = {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+        };
+
+        return rate.toLocaleString('en-US', options);
+    }
+
+
     return (
         <div className={styles.data} >
             <BackButton />
@@ -33,7 +45,7 @@ const BitCoinPrice = () => {
             {loading ? (
                 <p>wait...</p>
             ) : (
-                <p>USD rate: {price}$</p>
+                <p>USD rate: ${formatUSD(price)}</p>
             )}
 
         </div>

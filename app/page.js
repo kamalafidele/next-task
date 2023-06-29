@@ -1,6 +1,8 @@
 'use client';
 
 import {useRouter} from 'next/navigation';
+
+import CheckBox from '@/components/CheckBox';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -57,11 +59,7 @@ export default function Home() {
                 List Item
               </span>
             </div>
-            <div className={styles.right}>
-              <span>100+</span>
-              <input type="checkbox" checked />
-            </div>
-
+            <CheckBox checked={false} />
           </div>
           <div className={styles.center}>
             <div className={styles.left}>
@@ -70,10 +68,7 @@ export default function Home() {
                 List Item
               </span>
             </div>
-            <div className={styles.right}>
-              <span>100+</span>
-              <input type="checkbox" checked />
-            </div>
+            <CheckBox checked={true} />
           </div>
           <div className={styles.item}>
             <div className={styles.left}>
@@ -82,10 +77,7 @@ export default function Home() {
                 List Item
               </span>
             </div>
-            <div className={styles.right}>
-              <span>100+</span>
-              <input type="checkbox" checked />
-            </div>
+            <CheckBox checked={false} />
           </div>
         </div>
 
